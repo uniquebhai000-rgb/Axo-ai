@@ -2,5 +2,5 @@
   {"id":"default","label":"AXO Default","role":"default","provider":"anthropic","model":"claude-sonnet-5-5","keyEnv":"ANTHROPIC_API_KEY"},
   {"id":"fast","label":"AXO Fast","role":"fast","provider":"anthropic","model":"claude-haiku-5-5","keyEnv":"ANTHROPIC_API_KEY"},
   {"id":"reasoning","label":"AXO Reasoning","role":"reasoning","provider":"anthropic","model":"claude-opus-5-5","keyEnv":"ANTHROPIC_API_KEY"},
-  {"id":"openai","label":"OpenAI GPT","role":"alternative","provider":"openai","model":"llama-3.3-70b-versatile","keyEnv":"OPENAI_API_KEY"}
+  {"id":"openai","label":"OpenAI GPT","role":"alternative","provider":"openai","model":"llama-3.1-8b-instant","keyEnv":"OPENAI_API_KEY"}
 ]
