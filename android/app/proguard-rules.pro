@@ -1,0 +1,4 @@
+-keepattributes *Annotation*, InnerClasses
+-keepclassmembers class com.axo.ai.data.** { *** Companion; }
+-keep,includedescriptorclasses class com.axo.ai.data.**$$serializer { *; }
+-keepclasseswithmembers class com.axo.ai.data.** { kotlinx.serialization.KSerializer serializer(...); }
