@@ -1,7 +1,6 @@
 name: Unzip project
 on:
-  push:
-    paths: ['axo-ai.zip']
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
