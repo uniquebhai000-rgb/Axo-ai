@@ -27,7 +27,7 @@ android {
         }
     }
     buildTypes {
-        debug { buildConfigField("String", "BASE_URL", "\"https://axo-backend.onrender.com/\"") } // emulator -> your PC
+        debug { buildConfigField("String", "BASE_URL", "\"https://axo-ai.onrender.com/\"") } // emulator -> your PC  
         release {
             // Set this to your deployed HTTPS backend before building a release APK.
             buildConfigField("String", "BASE_URL", "\"https://YOUR_BACKEND_DOMAIN/\"")
