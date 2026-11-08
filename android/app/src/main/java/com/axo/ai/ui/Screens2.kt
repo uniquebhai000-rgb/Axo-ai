@@ -90,7 +90,7 @@ fun ExploreScreen(vm: LibraryVM, back: () -> Unit, open: (String) -> Unit, creat
     val list by vm.assistants.collectAsState()
     var menuFor by remember { mutableStateOf<String?>(null) }
     Page("Explore GPTs", back, fab = {
-        ExtendedFloatingActionButton({ create(null) }, icon = { Icon(Icons.Default.Add, null) }, text = { Text("Create") })
+        ExtendedFloatingActionButton(onClick = { create(null) }, icon = { Icon(Icons.Default.Add, null) }, text = { Text("Create") })
     }) { pad ->
         LazyColumn(Modifier.padding(pad), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             items(list, key = { it.id }) { a ->
