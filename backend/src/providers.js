@@ -28,10 +28,13 @@ export async function* streamChat(m, system, messages, signal) {
 }
 
 async function* sse(r, pick) {
-  if (!r.ok) {
-    console.error('Provider error', r.status, (await r.text()).slice(0, 500));
-    throw new Error(`The AI provider returned an error (${r.status}).`);
-  }
+    if (!r.ok) {
+    const t = (await r.text()).slice(0, 500);
+    console.error('Provider error', r.status, t);
+    let m = '';
+    try { m = JSON.parse(t).error?.message || ''; } catch {}
+    throw new Error(`Provider error ${r.status}: ${m || t}`.slice(0, 300));
+    }
   const dec = new TextDecoder();
   let buf = '';
   for await (const chunk of r.body) {
